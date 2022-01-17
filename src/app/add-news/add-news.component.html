@@ -1,0 +1,30 @@
+<form class="form" #newsForm="ngForm" (ngSubmit)="onSubmit(newsForm)">
+  <div class="mb-3 form-group">
+    <label for="exampleInputEmail1" class="form-label">عنوان :</label>
+    <input
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      required
+      name="header"
+      ngModel
+      type="text"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="floatingTextarea2">متن :</label>
+    <textarea
+      class="form-control"
+      style="height: 100px"
+      id="floatingTextarea"
+      required
+      name="body"
+      ngModel
+      cols="30"
+      rows="10"
+    ></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!newsForm.valid">
+    ذخیره
+  </button>
+</form>

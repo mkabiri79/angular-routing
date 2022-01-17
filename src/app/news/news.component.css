@@ -1,0 +1,34 @@
+.news__container {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  padding: 0 64px;
+}
+.nav {
+  background-color: #f8f9fa;
+
+  padding: 15px 10px;
+  margin: 0 auto;
+}
+.nav__link:link,
+.nav__link:visited {
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  list-style: none;
+}
+@media screen and (max-width: 1000px) {
+  .news__container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,9 @@
+<div class="card" *ngIf="isReportFound; else notFound">
+  <div class="card-header">{{ report.header }}</div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{ report.body }}</p>
+    </blockquote>
+  </div>
+</div>
+<ng-template #notFound> notFound</ng-template>

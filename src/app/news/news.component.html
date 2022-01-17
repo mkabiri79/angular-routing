@@ -1,0 +1,14 @@
+<div class="news__container">
+  <nav class="nav">
+    <ul class="nav__links">
+      <li class="nav__item" *ngFor="let report of news">
+        <a class="nav__link" [routerLink]="['report', report.id]">{{
+          report.header
+        }}</a>
+      </li>
+    </ul>
+  </nav>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
