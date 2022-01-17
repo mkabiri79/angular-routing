@@ -13,7 +13,7 @@ export class AddNewsComponent implements OnInit {
 
   ngOnInit(): void {}
   onSubmit(form: NgForm) {
-    const id = Math.random();
+    const id = Math.round(Math.random() * 1000);
     this.newsService.postNews({
       id,
       ...form.value,
