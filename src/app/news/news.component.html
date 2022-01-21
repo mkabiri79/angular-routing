@@ -1,6 +1,10 @@
-<div class="news__container">
+<div [ngClass]="{ 'nav-open': mobileNav }" class="news nav-open">
+  <button (click)="toggleNav()" class="btn-mobile-nav">
+    <fa-icon class="icon-mobile-nav" name="menu" [icon]="faBars"></fa-icon>
+    <fa-icon class="icon-mobile-nav" name="close" [icon]="faTimes"></fa-icon>
+  </button>
   <nav class="nav">
-    <ul class="nav__links">
+    <ul class="nav__items">
       <li class="nav__item" *ngFor="let report of news">
         <a class="nav__link" [routerLink]="['report', report.id]">{{
           report.header
@@ -8,7 +12,6 @@
       </li>
     </ul>
   </nav>
-  <div>
-    <router-outlet></router-outlet>
-  </div>
+
+  <router-outlet></router-outlet>
 </div>

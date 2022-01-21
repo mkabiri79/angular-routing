@@ -1,3 +1,51 @@
 .form {
-  padding: 0 18px;
+  font-size: 1.2rem;
+  width: 50rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.103);
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 1.4rem;
+}
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form__input {
+  height: 3.2rem;
+  background-color: inherit;
+  width: 46rem;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #e0e0e2;
+  border-radius: 3px;
+}
+.form__textarea {
+  border: 1px solid #e0e0e2;
+  border-radius: 3px;
+  width: 46rem;
+  padding: 0.7rem 1.2rem;
+}
+button {
+  border: none;
+  height: 3.8rem;
+  width: 46rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #e23033;
+  padding: 0 1.9rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 3px;
+}
+button:disabled {
+  border: 1px solid #e0e0e2;
+
+  color: #616161;
+  background-color: inherit;
+  cursor: default;
 }

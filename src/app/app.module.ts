@@ -9,6 +9,7 @@ import { AddNewsComponent } from './add-news/add-news.component';
 import { ReportComponent } from './report/report.component';
 import { HeaderComponent } from './header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AddNewsComponent,
     ReportComponent,
     HeaderComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [],

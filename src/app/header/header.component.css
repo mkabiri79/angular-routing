@@ -1,10 +1,30 @@
 .header {
+  padding: 1rem 10rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  font-size: 12px;
-  color: #fff;
+  background-color: #fafafa;
+  /* box-shadow: 01px 0px 3px rgba(0, 0, 0, 0.205); */
 }
-img {
-  width: 100px;
+.header__logo {
+  height: 10rem;
+}
+.header__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid #e0e0e2;
+  border-radius: 15px;
+}
+.header__link a:link,
+.header__link a:visited {
+  color: #616161;
+  text-decoration: none;
+}
+@media (max-width: 33em) {
+  .header__link a span {
+    display: none;
+  }
 }

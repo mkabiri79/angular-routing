@@ -12,7 +12,7 @@ export class AddNewsComponent implements OnInit {
   constructor(private newsService: NewsService, private router: Router) {}
 
   ngOnInit(): void {}
-  onSubmit(form: NgForm) {
+  public onSubmit(form: NgForm) {
     const id = Math.round(Math.random() * 1000);
     this.newsService.postNews({
       id,

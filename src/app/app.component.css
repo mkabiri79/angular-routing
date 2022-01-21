@@ -1,4 +1,24 @@
-.nav-link {
+.main__nav {
+  background-color: #fafafa;
+  padding-bottom: 2rem;
+  margin-right: 2rem;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.034);
+}
+.main__nav--list {
+  list-style: none;
   display: flex;
-  gap: 6px;
+  gap: 3.2rem;
+}
+
+.main__nav--link:link,
+.main__nav--link:visited {
+  display: block;
+  height: 3.2rem;
+
+  text-decoration: none;
+  color: #333;
+  font-size: 1.7rem;
+}
+.active {
+  border-bottom: 3px solid #e23033;
 }

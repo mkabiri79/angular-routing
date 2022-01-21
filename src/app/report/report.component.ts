@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChange } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+
 import { INews } from '../app-interface';
 import { NewsService } from '../news.service';
 
@@ -9,7 +10,7 @@ import { NewsService } from '../news.service';
   styleUrls: ['./report.component.css'],
 })
 export class ReportComponent implements OnInit {
-  report!: INews | any; //
+  report!: INews;
   isReportFound!: boolean;
   constructor(private newService: NewsService, private route: ActivatedRoute) {}
 
@@ -17,11 +18,10 @@ export class ReportComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       this.report = this.newService.news.find(
         (report) => report.id === +params['id']
-      );
+      )!;
+      if (!this.report) {
+        this.isReportFound = false;
+      } else this.isReportFound = true;
     });
-    this.isReportFound = true;
-    if (!this.report) {
-      this.isReportFound = false;
-    }
   }
 }

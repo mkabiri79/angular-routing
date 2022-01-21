@@ -1,8 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "parastoo";
+  src: url("/src/assets/font/Parastoo.eot");
+  src: url("/src/assets/font/Parastoo.woff") format("woff"),
+    url("/src/assets/font/Parastoo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
 body {
   direction: rtl;
+  line-height: 1;
+  font-weight: normal;
+  background-color: #fff;
+  font-family: "parastoo", sans-serif;
+  font-size: 1.4rem;
+
+  color: #616161;
 }
-@media screen and (max-width: 720px) {
-  body {
+fa-icon {
+  border-color: #616161;
+}
+
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+  @media (max-width: 33em) {
+    html {
+      font-size: 45%;
+    }
   }
 }

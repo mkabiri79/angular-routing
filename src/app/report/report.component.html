@@ -1,9 +1,9 @@
 <div class="card" *ngIf="isReportFound; else notFound">
-  <div class="card-header">{{ report.header }}</div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
+  <div class="card__header">{{ report.header }}</div>
+  <div class="card__body">
+    <blockquote class="">
       <p>{{ report.body }}</p>
     </blockquote>
   </div>
 </div>
-<ng-template #notFound> notFound</ng-template>
+<ng-template class="card__header" #notFound> پیدا نشد 404</ng-template>
